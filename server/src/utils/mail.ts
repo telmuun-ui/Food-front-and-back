@@ -9,6 +9,7 @@ const transport = nodemailer.createTransport({
     user: AUTH_EMAIL,
     pass: AUTH_PASS,
   },
+  port: 587,
 });
 export const verifyUserEmail = async (receiver: string, verifyLink: string) => {
   await transport.sendMail({
