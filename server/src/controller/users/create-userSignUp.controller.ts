@@ -25,10 +25,10 @@ export const signUpController = async (req: Request, res: Response) => {
       },
     );
 
-    await verifyUserEmail(
-      email,
-      `${process.env.BACKEND_API}/users/verify-user?token=${token}`,
-    );
+    // await verifyUserEmail(
+    //   email,
+    //   `${process.env.BACKEND_API}/users/verify-user?token=${token}`,
+    // );
 
     res.status(200).json({
       message: "Batalgaajuulah link email ruu chini yvuullaa",
